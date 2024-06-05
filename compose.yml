@@ -1,0 +1,11 @@
+services:
+  node:
+    container_name: "React_Test"
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./src:/usr/src/app
+    ports:
+      - '3000:3000'
+    tty: true
